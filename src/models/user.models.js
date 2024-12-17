@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { emit } from "process";
 const userSchema = new Schema(
     {
         username: {
@@ -42,7 +41,7 @@ const userSchema = new Schema(
             type: String,
             required: [true, 'Password is required']
         },
-        accessToken: {
+        refreshToken: {
             type: String
         }
     },
